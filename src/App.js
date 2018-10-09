@@ -9,7 +9,11 @@ const App = () => (
       <img className="Cover" src={Cover} alt="Cover" />
       <div className="image">&nbsp;</div>
       <img className="Logo" src={Logo} alt="Sheesh" />
-      <h3 className="cursive">Por mais dates com hambúrguer e batata</h3>
+      <h3 className="cursive">
+        Em breve novidades!
+        <br />
+        Acesse o nosso instagram.
+      </h3>
       <a
         href="https://www.instagram.com/sheesh.burger/"
         target="_blank"
