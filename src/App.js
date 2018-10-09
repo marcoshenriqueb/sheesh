@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import Cover from './assets/img/cover.jpg';
+import Logo from './assets/img/logo.png';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <section className="App-section Primary-bg">
+      <img className="Cover" src={Cover} alt="Cover" />
+      <div className="image">&nbsp;</div>
+      <img className="Logo" src={Logo} alt="Sheesh" />
+      <h3 className="cursive">Por mais dates com hambúrguer e batata</h3>
+      <a
+        href="https://www.instagram.com/sheesh.burger/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="Social-anchor"
+      >
+        <i className="fab fa-instagram" />
+      </a>
+      <span className="small">Rua Oliveira Fausto 29A, Botafogo, RJ</span>
+      <span className="small">(21) 4116-1207</span>
+    </section>
+  </div>
+);
 
 export default App;
