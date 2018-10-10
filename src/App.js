@@ -12,16 +12,27 @@ const App = () => (
       <h3 className="cursive">
         Em breve novidades!
         <br />
-        Acesse o nosso instagram.
+        Acesse as nossas redes.
       </h3>
-      <a
-        href="https://www.instagram.com/sheesh.burger/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="Social-anchor"
-      >
-        <i className="fab fa-instagram" />
-      </a>
+      <div>
+        <a
+          href="https://www.instagram.com/sheesh.burger/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="Social-anchor"
+        >
+          <i className="fab fa-instagram" />
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a
+          href="https://www.facebook.com/sheeshburger/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="Social-anchor"
+        >
+          <i className="fab fa-facebook-square" />
+        </a>
+      </div>
       <span className="small">Rua Oliveira Fausto 29A, Botafogo, RJ</span>
       <span className="small">(21) 4116-1207</span>
     </section>
