@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Yellow-bg {
+  background-color: #FFCF3F;
+  color: white;
+}
+
+.Purple-bg {
+  background-color: purple;
+  color: white;
 }
 
 .Primary-bg {
@@ -51,15 +63,48 @@
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+  &.half{
+    border: none;
+    cursor: pointer;
+    height: calc(50vh - 10px);
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+    &:nth-child(1) {
+      margin-bottom: 0;
+    }
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
 }
 
 
 @media(min-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: row;
+  }
   .App-section {
     margin: 30px;
     height: calc(100vh - 60px);
     width: calc(100% - 60px);
     font-size: 1.5rem;
+    &.half{
+      border: none;
+      cursor: pointer;
+      height: calc(100vh - 60px);
+      width: calc(50% - 30px);
+      &:nth-child(1) {
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
   }
 
   .small {
