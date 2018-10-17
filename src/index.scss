@@ -1,3 +1,8 @@
+@font-face {
+  font-family: avenir;
+  src: url(./assets/fonts/AVENIRLTSTD-BOOK.OTF);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +17,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cursive {
-  font-family: 'Mali', cursive;
+.primary-font {
+  font-family: 'avenir', cursive;
 }

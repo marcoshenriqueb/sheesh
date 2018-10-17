@@ -9,7 +9,7 @@ const App = () => (
       <img className="Cover" src={Cover} alt="Cover" />
       <div className="image">&nbsp;</div>
       <img className="Logo" src={Logo} alt="Sheesh" />
-      <h3 className="cursive">
+      <h3 className="primary-font">
         Em breve novidades!
         <br />
         Acesse as nossas redes.
@@ -33,8 +33,8 @@ const App = () => (
           <i className="fab fa-facebook-square" />
         </a>
       </div>
-      <span className="small">Rua Oliveira Fausto 29A, Botafogo, RJ</span>
-      <span className="small">(21) 4116-1207</span>
+      <span className="small primary-font">Rua Oliveira Fausto 29A, Botafogo, RJ</span>
+      <span className="small primary-font">(21) 4116-1207</span>
     </section>
   </div>
 );
