@@ -1,7 +1,24 @@
 $primary-color: #FFCF3F;
+$complementary-color: #ff6f3f;
+
 
 .App {
+  width: 100%;
+  overflow: hidden;
   text-align: center;
+  position: relative;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
+  padding: .8rem 1rem;
+  font-size: .7rem;
 }
 
 .header {
@@ -11,94 +28,124 @@ $primary-color: #FFCF3F;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 1rem 2rem;
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  left: 100%;
+  top: 0;
+  padding: 2rem;
+  background-color: white;
+}
+
+.close-btn__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+}
+
+.nav {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: left;
 }
 
 .nav-item {
-  font-size: 1.1rem;
+  display: block;
+  font-size: 1.5rem;
   color: black;
   text-decoration: none;
   text-transform: lowercase;
   font-weight: bold;
-  padding: .4rem;
+  padding: .8rem 0;
   cursor: pointer;
-  border: dashed 2px white;
-  transition: all 600ms;
+}
 
-  &:hover, &:focus {
-    border-color: $primary-color;
-    color: $primary-color;
-  }
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-bg {
+  background-color: $primary-color;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  text-align: left;
+}
+
+.title {
+  font-family: 'avenir-heavy', cursive;
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: $complementary-color;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.button {
+  background: $complementary-color;
+  padding: .8rem;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .header-image {
-  color: white;
-  position: relative;
   height: 70vh;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("./assets/img/lifestyle2.jpg") no-repeat;
+  // background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("./assets/img/lifestyle2.jpg") no-repeat;
+  background: url("./assets/img/lifestyle2.jpg") no-repeat;
   background-position: center 60%;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .Logo{
   height: 25px;
 }
 
+.App-section {
+  width: 100%;
+  padding: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+}
+
 .Primary-bg {
   position: relative;
   color: black;
   overflow: hidden;
-
-  .image-container {
-    margin: 3rem 0 0 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .image{
-    width: 100%;
-    height: auto;
-
-    &:nth-child(2) {
-      display: none;
-    }
-  }
-}
-
-.title {
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: $primary-color;
-  text-transform: lowercase;
-}
-
-.title-small {
-  font-size: 1.5rem;
 }
 
 .storystelling {
-  margin: 0;
+  margin: 0 2rem;
   text-align: justify;
 }
 
-.Social-anchor {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 1rem;
-  &:hover, &:focus {
-    color: black;
-  }
-}
-
-.small {
-  font-size: .8rem;
+.image{
+  margin-top: 2rem;
+  width: auto;
+  height: 130vw;
 }
 
 .border-padding {
@@ -110,38 +157,27 @@ $primary-color: #FFCF3F;
   border: 2px dashed $primary-color;
 }
 
-.App-section {
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: .9rem;
+.food-menu {
+  margin: 1rem 0;
 }
 
+.food-menu__item {
+  padding: 1rem 0;
+}
+
+.food-menu__item-title {
+  font-size: 2.2rem;
+  color: $complementary-color;
+}
+
+.food-menu-image {
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: auto;
+    height: 75vw;
+  }
+}
 
 @media(min-width: 768px) {
-  .App-section {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-
-  .Logo{
-    height: 50px;
-  }
-
-  .Primary-bg {
-    .image{
-      width: 48%;
-
-      &:nth-child(2) {
-        display: inline;
-      }
-    }
-  }
-
-  .small {
-    font-size: .9rem;
-  }
 }
