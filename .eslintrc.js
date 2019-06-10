@@ -1,5 +1,8 @@
 module.exports = {
   "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
   'rules': {
     // Recognizes JSX components vars used.
     "react/jsx-uses-vars": "error",

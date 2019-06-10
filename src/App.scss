@@ -139,6 +139,9 @@ $complementary-color: #ff6f3f;
 
   &.colored {
     background-color: $complementary-color;
+    .subtitle {
+      color: white;
+    }
   }
 }
 
@@ -161,7 +164,7 @@ $complementary-color: #ff6f3f;
 
 .overlay {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,14 +188,11 @@ $complementary-color: #ff6f3f;
 
 .food-menu {
   width: 100%;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0;
 }
 
 .food-menu__item {
   padding: 1rem 0;
-  &:last-child {
-    padding-bottom: 0;
-  }
 }
 
 .food-menu__item-title {
@@ -301,12 +301,8 @@ $complementary-color: #ff6f3f;
     font-size: 7rem;
   }
 
-  .button {
-    width: 20%;
-    position: absolute;
-    right: 90%;
-    bottom: 25%;
-    cursor: pointer;
+  .button-home {
+    display: none;
   }
 
   .header-image {
@@ -338,16 +334,27 @@ $complementary-color: #ff6f3f;
     margin-top: 4rem;
     width: 100%;
     height: 70vh;
-    overflow: hidden;
-    padding: 2rem;
+    padding: 0 2rem;
     position: relative;
+    .image-container{
+      height: 100%;
+      overflow: hidden;
+      width: auto;
+    }
+
     .image{
+      height: 100%;
       position: relative;
       left: 0;
+      top: -12%;
       bottom: 50%;
-      width: 100%;
+      width: auto;
       height: auto;
     }
+  }
+
+  .overlay {
+    font-size: 3rem;
   }
 
   .contact {
