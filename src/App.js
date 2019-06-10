@@ -7,13 +7,13 @@ import Burger from './assets/img/burger1.jpg';
 const App = () => (
   <div className="App">
     <div className="info">
-      <span>Seg - Dom: 12h - 24h</span>
-      <span>Rua Oliveira Fausto n29A, Botafogo</span>
-      <span>(21) 4116-1207</span>
+      <span className="text">Seg - Dom: 12h - 24h</span>
+      <span className="text">Rua Oliveira Fausto n29A, Botafogo</span>
+      <span className="text">(21) 4116-1207</span>
     </div>
     <header className="header">
       <img className="Logo" src={Logo} alt="Sheesh" />
-      <span>Menu</span>
+      <span className="menu-icon">Menu</span>
       <nav className="menu">
         <div className="close-btn__container">
           <span className="close-btn">X</span>
@@ -47,9 +47,12 @@ const App = () => (
         Venha conhecer o nosso cantinho em Botafogo! Ahh, não esqueça de pronunciar
         certinho, é Xix que fala ;)
       </p>
-      <img className="image" src={Burger1} alt="Sheesh" />
+      <div className="section-image">
+        <img className="image " src={Burger1} alt="Sheesh" />
+        <div className="overlay">&nbsp;</div>
+      </div>
     </section>
-    <section className="App-section Primary-bg">
+    <section className="App-section Primary-bg pb-0">
       <h2 className="subtitle">.cardápio</h2>
       <div className="food-menu">
         <div className="food-menu__item">
@@ -77,6 +80,19 @@ const App = () => (
           </div>
         </div>
       </div>
+    </section>
+    <section className="App-section Primary-bg colored">
+      <h2 className="subtitle">.contato</h2>
+      <div className="contact">
+        <span>Venha nos conhecer ;)</span>
+        <br />
+        <span>Seg - Dom: 12h - 24h</span>
+        <span>Rua Oliveira Fausto n29A, Botafogo</span>
+        <span>(21) 4116-1207</span>
+      </div>
+    </section>
+    <section className="App-section Primary-bg">
+      <span>© 2019 por Sheesh!</span>
     </section>
   </div>
 );

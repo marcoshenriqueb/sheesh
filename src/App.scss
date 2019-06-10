@@ -15,7 +15,7 @@ $complementary-color: #ff6f3f;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: black;
+  background-color: $complementary-color;
   color: white;
   padding: .8rem 1rem;
   font-size: .7rem;
@@ -69,6 +69,7 @@ $complementary-color: #ff6f3f;
 }
 
 .home {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -93,12 +94,6 @@ $complementary-color: #ff6f3f;
   margin-bottom: 1.5rem;
 }
 
-.subtitle {
-  color: black;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}
-
 .button {
   background: $complementary-color;
   padding: .8rem;
@@ -117,13 +112,19 @@ $complementary-color: #ff6f3f;
   background-size: cover;
 }
 
+.subtitle {
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
 .Logo{
   height: 25px;
 }
 
 .App-section {
   width: 100%;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,6 +136,10 @@ $complementary-color: #ff6f3f;
   position: relative;
   color: black;
   overflow: hidden;
+
+  &.colored {
+    background-color: $complementary-color;
+  }
 }
 
 .storystelling {
@@ -142,10 +147,26 @@ $complementary-color: #ff6f3f;
   text-align: justify;
 }
 
-.image{
+.section-image {
   margin-top: 2rem;
+  position: relative;
+  padding: 0;
+}
+
+.image{
+  display: block;
   width: auto;
   height: 130vw;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .border-padding {
@@ -158,11 +179,15 @@ $complementary-color: #ff6f3f;
 }
 
 .food-menu {
-  margin: 1rem 0;
+  width: 100%;
+  margin: 1rem 0 0 0;
 }
 
 .food-menu__item {
   padding: 1rem 0;
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .food-menu__item-title {
@@ -171,13 +196,163 @@ $complementary-color: #ff6f3f;
 }
 
 .food-menu-image {
+  display: block;
   width: 100%;
   overflow: hidden;
+  height: 75vw;
   img {
     width: auto;
     height: 75vw;
   }
 }
 
+.contact {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  color: white;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
 @media(min-width: 768px) {
+  .info {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    .text {
+      margin: 0 1rem;
+    }
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+    padding: 1.5rem 2rem 1rem 2rem;
+  }
+
+  .Logo{
+    margin-bottom: .5rem;
+  }
+
+  .menu {
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .close-btn__container {
+    display: none;
+  }
+
+  .nav {
+    margin-top: 0;
+    width: auto;
+    text-align: center;
+  }
+
+  .nav-item {
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .pop-bg {
+    height: 90vh;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    order: 2;
+  }
+
+  .title {
+    width: 100%;
+    position: absolute;
+    right: 50%;
+    top: 5%;
+    font-size: 7rem;
+  }
+
+  .button {
+    width: 20%;
+    position: absolute;
+    right: 90%;
+    bottom: 25%;
+    cursor: pointer;
+  }
+
+  .header-image {
+    height: 90vh;
+    width: 50%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("./assets/img/lifestyle2.jpg") no-repeat;
+    background-position: center 60%;
+    background-size: cover;
+  }
+
+  .storystelling {
+    margin: 0 8rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .App-section {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .section-image {
+    margin-top: 4rem;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    .image{
+      position: relative;
+      left: 0;
+      bottom: 50%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contact {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
 }
