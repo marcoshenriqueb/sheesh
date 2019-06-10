@@ -4,6 +4,7 @@ import './App.scss';
 import Logo from './assets/img/logo.png';
 import Burger1 from './assets/img/lifestyle1.jpg';
 import Burger from './assets/img/burger1.jpg';
+import Burger2 from './assets/img/burger2.jpg';
 
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
         slidesToScroll: 1,
       },
       smallScreen: false,
+      isMenuActive: false,
     };
   }
 
@@ -35,8 +37,9 @@ class App extends React.Component {
   }
 
   render() {
-    const { settings, smallScreen } = this.state;
+    const { settings, smallScreen, isMenuActive } = this.state;
     settings.slidesToShow = smallScreen ? 1 : 3;
+    const menuClasses = `menu ${isMenuActive ? 'active' : ''}`;
     return (
       <div className="App">
         <div className="info">
@@ -46,10 +49,20 @@ class App extends React.Component {
         </div>
         <header className="header">
           <img className="Logo" src={Logo} alt="Sheesh" />
-          <span className="menu-icon">Menu</span>
-          <nav className="menu">
+          <span
+            className="menu-icon"
+            onClick={() => this.setState({ isMenuActive: true })}
+          >
+            Menu
+          </span>
+          <nav className={menuClasses}>
             <div className="close-btn__container">
-              <span className="close-btn">X</span>
+              <span
+                className="close-btn"
+                onClick={() => this.setState({ isMenuActive: false })}
+              >
+                X
+              </span>
             </div>
             <div className="nav">
               <a href="#franquia" className="nav-item">.home</a>
@@ -96,8 +109,8 @@ class App extends React.Component {
                 <div className="food-menu-image">
                   <img className="image" src={Burger} alt="Sheesh" />
                 </div>
-                <div>
-                  <h3>2</h3>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger2} alt="Sheesh" />
                 </div>
                 <div>
                   <h3>3</h3>
