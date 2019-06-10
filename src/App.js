@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './App.scss';
 import Logo from './assets/img/logo.png';
 import Menu from './assets/img/menu.svg';
@@ -42,6 +43,10 @@ class App extends React.Component {
     }
   }
 
+  close() {
+    this.setState({ isMenuActive: false });
+  }
+
   render() {
     const { settings, smallScreen, isMenuActive } = this.state;
     settings.slidesToShow = smallScreen ? 1 : 3;
@@ -65,16 +70,15 @@ class App extends React.Component {
             <div className="close-btn__container">
               <span
                 className="close-btn"
-                onClick={() => this.setState({ isMenuActive: false })}
+                onClick={() => this.close()}
               >
                 X
               </span>
             </div>
             <div className="nav">
-              <a href="#franquia" className="nav-item">.home</a>
-              <a href="#franquia" className="nav-item">.o porquê</a>
-              <a href="#franquia" className="nav-item">.cardápio</a>
-              <a href="#franquia" className="nav-item">.contato</a>
+              <AnchorLink onClick={() => this.close()} href="#why" className="nav-item">.o porquê</AnchorLink>
+              <AnchorLink onClick={() => this.close()} href="#menu" className="nav-item">.cardápio</AnchorLink>
+              <AnchorLink onClick={() => this.close()} href="#contact" className="nav-item">.contato</AnchorLink>
             </div>
           </nav>
         </header>
@@ -87,7 +91,7 @@ class App extends React.Component {
             &nbsp;
           </div>
         </section>
-        <section className="App-section Primary-bg">
+        <section className="App-section Primary-bg" id="why">
           <h2 className="subtitle">.o porquê</h2>
           <p className="storystelling sheesh-border border-padding">
             O SHEESH! foi criado com o propósito de oferecer um hambúrguer artesanal
@@ -106,7 +110,7 @@ class App extends React.Component {
             <div className="overlay">Me leve pra casa!</div>
           </div>
         </section>
-        <section className="App-section Primary-bg pb-0">
+        <section className="App-section Primary-bg pb-0" id="menu">
           <h2 className="subtitle">.cardápio</h2>
           <div className="food-menu">
             <div className="food-menu__item">
@@ -140,7 +144,7 @@ class App extends React.Component {
             </div>
           </div>
         </section>
-        <section className="App-section Primary-bg colored">
+        <section className="App-section Primary-bg colored" id="contact">
           <h2 className="subtitle">.contato</h2>
           <div className="contact">
             <span>Venha nos conhecer ;)</span>
