@@ -2,9 +2,15 @@ import React from 'react';
 import Slider from 'react-slick';
 import './App.scss';
 import Logo from './assets/img/logo.png';
-import Burger1 from './assets/img/lifestyle1.jpg';
-import Burger from './assets/img/burger1.jpg';
+import Menu from './assets/img/menu.svg';
+import Lifestyle from './assets/img/lifestyle1.jpg';
+import Burger1 from './assets/img/burger1.jpg';
 import Burger2 from './assets/img/burger2.jpg';
+import Burger3 from './assets/img/burger3.jpg';
+import Burger4 from './assets/img/burger4.jpg';
+import Burger5 from './assets/img/burger5.jpg';
+import Burger6 from './assets/img/burger6.jpg';
+import Burger7 from './assets/img/burger7.jpg';
 
 
 class App extends React.Component {
@@ -53,7 +59,7 @@ class App extends React.Component {
             className="menu-icon"
             onClick={() => this.setState({ isMenuActive: true })}
           >
-            Menu
+            <img src={Menu} alt="burger menu" />
           </span>
           <nav className={menuClasses}>
             <div className="close-btn__container">
@@ -95,7 +101,7 @@ class App extends React.Component {
           </p>
           <div className="section-image">
             <div className="image-container">
-              <img className="image " src={Burger1} alt="Sheesh" />
+              <img className="image " src={Lifestyle} alt="Sheesh" />
             </div>
             <div className="overlay">Me leve pra casa!</div>
           </div>
@@ -107,22 +113,25 @@ class App extends React.Component {
               <span className="food-menu__item-title">Burgers</span>
               <Slider {...settings}>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger} alt="Sheesh" />
+                  <img className="image" src={Burger7} alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
                   <img className="image" src={Burger2} alt="Sheesh" />
                 </div>
-                <div>
-                  <h3>3</h3>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger1} alt="Sheesh" />
                 </div>
-                <div>
-                  <h3>4</h3>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger3} alt="Sheesh" />
                 </div>
-                <div>
-                  <h3>5</h3>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger4} alt="Sheesh" />
                 </div>
-                <div>
-                  <h3>6</h3>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger5} alt="Sheesh" />
+                </div>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger6} alt="Sheesh" />
                 </div>
               </Slider>
               <br />

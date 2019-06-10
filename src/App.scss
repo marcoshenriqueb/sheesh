@@ -46,6 +46,11 @@ $complementary-color: #ff6f3f;
   }
 }
 
+.menu-icon {
+  display: flex;
+  align-items: flex-end;
+}
+
 .close-btn__container {
   width: 100%;
   display: flex;
@@ -359,6 +364,17 @@ $complementary-color: #ff6f3f;
 
   .overlay {
     font-size: 3rem;
+  }
+
+  .food-menu-image {
+    width: 30vh;
+    overflow: hidden;
+    height: auto;
+    img {
+      width: 100%;
+      margin: 0;
+      height: auto;
+    }
   }
 
   .contact {
