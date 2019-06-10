@@ -13,7 +13,6 @@ import Burger5 from './assets/img/burger5.jpg';
 import Burger6 from './assets/img/burger6.jpg';
 import Burger7 from './assets/img/burger7.jpg';
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -144,7 +143,7 @@ class App extends React.Component {
             </div>
           </div>
         </section>
-        <section className="App-section Primary-bg colored" id="contact">
+        <section className="App-section Primary-bg colored pb-0" id="contact">
           <h2 className="subtitle">.contato</h2>
           <div className="contact">
             <span>Venha nos conhecer ;)</span>
@@ -152,6 +151,14 @@ class App extends React.Component {
             <span>Seg - Dom: 12h - 24h</span>
             <span>Rua Oliveira Fausto n29A, Botafogo</span>
             <span>(21) 4116-1207</span>
+          </div>
+          <div className="map">
+            <iframe
+              title="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.8284673578996!2d-43.18575134977326!3d-22.956543545345355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ffb5bfafbf7%3A0x117adc8c5c4feb52!2sR.+Oliveira+Fausto%2C+29+-+Botafogo%2C+Rio+de+Janeiro+-+RJ%2C+22280-090!5e0!3m2!1spt-BR!2sbr!4v1560190670039!5m2!1spt-BR!2sbr"
+              frameBorder="0"
+              style={{ border: 0 }}
+            />
           </div>
         </section>
         <section className="App-section Primary-bg">
