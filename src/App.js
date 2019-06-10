@@ -49,7 +49,7 @@ const App = () => (
       </p>
       <div className="section-image">
         <img className="image " src={Burger1} alt="Sheesh" />
-        <div className="overlay">&nbsp;</div>
+        <div className="overlay">Me leve pra casa!</div>
       </div>
     </section>
     <section className="App-section Primary-bg pb-0">
