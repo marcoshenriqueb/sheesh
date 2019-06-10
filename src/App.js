@@ -156,6 +156,7 @@ class App extends React.Component {
             <span>Seg - Dom: 12h - 24h</span>
             <span>Rua Oliveira Fausto n29A, Botafogo</span>
             <span>(21) 4116-1207</span>
+            <span>contato@sheesh.com.br</span>
           </div>
           <div className="map">
             <iframe
