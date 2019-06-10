@@ -110,6 +110,7 @@ $complementary-color: #ff6f3f;
   border: none;
   text-transform: uppercase;
   font-weight: normal;
+  text-decoration: none;
 }
 
 .header-image {
@@ -183,7 +184,7 @@ $complementary-color: #ff6f3f;
   width: calc(100% - 4rem);
   height: 100%;
   z-index: 100;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.0);
 }
 
 .border-padding {
@@ -261,6 +262,7 @@ $complementary-color: #ff6f3f;
   }
 
   .Logo{
+    height: 40px;
     margin-bottom: .5rem;
   }
 

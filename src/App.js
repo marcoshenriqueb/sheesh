@@ -4,6 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './App.scss';
 import Logo from './assets/img/logo.png';
 import Menu from './assets/img/menu.svg';
+import MenuImage from './assets/img/menu.jpg';
 import Lifestyle from './assets/img/lifestyle1.jpg';
 import Burger1 from './assets/img/burger1.jpg';
 import Burger2 from './assets/img/burger2.jpg';
@@ -84,7 +85,7 @@ class App extends React.Component {
         <section className="home">
           <div className="pop-bg">
             <h2 className="title">É xix que fala?</h2>
-            <button type="button" className="button button-home">Cardápio</button>
+            <a className="button button-home" target="_blank" rel="noopener noreferrer" href={MenuImage}>cardápio</a>
           </div>
           <div className="header-image">
             &nbsp;
@@ -139,7 +140,10 @@ class App extends React.Component {
               </Slider>
               <br />
               <br />
-              <button className="button" type="button">cardápio</button>
+              <br />
+              <a className="button" target="_blank" rel="noopener noreferrer" href={MenuImage}>cardápio</a>
+              <br />
+              <br />
             </div>
           </div>
         </section>
