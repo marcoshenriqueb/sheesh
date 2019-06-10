@@ -4,6 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './App.scss';
 import Logo from './assets/img/logo.png';
 import Menu from './assets/img/menu.svg';
+import CloseIcon from './assets/img/close.svg';
 import MenuImage from './assets/img/menu.jpg';
 import Lifestyle from './assets/img/lifestyle1.jpg';
 import Burger1 from './assets/img/burger1.jpg';
@@ -72,7 +73,7 @@ class App extends React.Component {
                 className="close-btn"
                 onClick={() => this.close()}
               >
-                X
+                <img src={CloseIcon} alt="close menu" />
               </span>
             </div>
             <div className="nav">
