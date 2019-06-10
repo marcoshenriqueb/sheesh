@@ -107,7 +107,7 @@ class App extends React.Component {
             <div className="image-container">
               <img className="image " src={Lifestyle} alt="Sheesh" />
             </div>
-            <div className="overlay">Me leve pra casa!</div>
+            <div className="overlay" />
           </div>
         </section>
         <section className="App-section Primary-bg pb-0" id="menu">
