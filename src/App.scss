@@ -1,5 +1,5 @@
 $primary-color: #FFCF3F;
-$complementary-color: #ff6f3f;
+$complementary-color: #ff3232;
 
 
 .App {
@@ -15,7 +15,7 @@ $complementary-color: #ff6f3f;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: $complementary-color;
+  background-color: black;
   color: white;
   padding: .8rem 1rem;
   font-size: .7rem;
@@ -103,7 +103,7 @@ $complementary-color: #ff6f3f;
   font-family: 'avenir-heavy', cursive;
   font-size: 3.5rem;
   font-weight: normal;
-  color: $complementary-color;
+  color: black;
   margin-bottom: 1.5rem;
 }
 
@@ -152,7 +152,7 @@ $complementary-color: #ff6f3f;
   overflow: hidden;
 
   &.colored {
-    background-color: $complementary-color;
+    background-color: black;
     .subtitle {
       color: white;
     }
@@ -308,17 +308,18 @@ $complementary-color: #ff6f3f;
   .pop-bg {
     height: 80vh;
     width: 50%;
-    text-align: center;
-    align-items: center;
+    text-align: right;
+    align-items: right;
     position: relative;
     order: 2;
   }
 
   .title {
     width: 100%;
-    position: absolute;
-    right: 50%;
-    top: 5%;
+    margin-top: -5%;
+    // position: absolute;
+    // right: 50%;
+    // top: 5%;
     font-size: 7rem;
   }
 
@@ -329,7 +330,7 @@ $complementary-color: #ff6f3f;
   .header-image {
     height: 80vh;
     width: 50%;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("./assets/img/lifestyle2.jpg") no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("./assets/img/lifestyle2.jpg") no-repeat;
     background-position: center 60%;
     background-size: cover;
   }
