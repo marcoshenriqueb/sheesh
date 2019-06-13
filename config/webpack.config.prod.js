@@ -256,6 +256,14 @@ module.exports = {
         include: paths.appSrc,
       },
       {
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: require.resolve('image-webpack-loader'),
+        // Specify enforce: 'pre' to apply the loader
+        // before url-loader/svg-url-loader
+        // and not duplicate it in rules with them
+        enforce: 'pre',
+      },
+      {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
