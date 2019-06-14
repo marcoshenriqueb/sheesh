@@ -86,6 +86,7 @@ class App extends React.Component {
         <section className="home">
           <div className="pop-bg">
             <h2 className="title">É xix que fala?</h2>
+            <h1 className="main-title">hambúrguer gostoso e sem frescura</h1>
             <a className="button button-home" target="_blank" rel="noopener noreferrer" href={MenuImage}>cardápio</a>
           </div>
           <div className="header-image">

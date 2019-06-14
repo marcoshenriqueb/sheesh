@@ -107,6 +107,11 @@ $complementary-color: #ff3232;
   margin-bottom: 1.5rem;
 }
 
+.main-title {
+  visibility: hidden;
+  position: absolute;
+}
+
 .button {
   background: $complementary-color;
   padding: .8rem;
@@ -309,7 +314,7 @@ $complementary-color: #ff3232;
     height: 80vh;
     width: 50%;
     text-align: right;
-    align-items: right;
+    align-items: flex-end;
     position: relative;
     order: 2;
   }
