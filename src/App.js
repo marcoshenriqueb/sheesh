@@ -6,7 +6,8 @@ import Logo from './assets/img/logo.png';
 import Menu from './assets/img/menu.svg';
 import CloseIcon from './assets/img/close.svg';
 import MenuImage from './assets/img/menu.jpg';
-import Lifestyle from './assets/img/lifestyle1.jpg';
+import BaconVideo from './assets/img/cooking_bacon.mp4';
+// import Lifestyle from './assets/img/lifestyle1.jpg';
 import Burger1 from './assets/img/burger1.jpg';
 import Burger2 from './assets/img/burger2.jpg';
 import Burger3 from './assets/img/burger3.jpg';
@@ -80,6 +81,7 @@ class App extends React.Component {
               <AnchorLink onClick={() => this.close()} href="#why" className="nav-item">.o porquê</AnchorLink>
               <AnchorLink onClick={() => this.close()} href="#menu" className="nav-item">.cardápio</AnchorLink>
               <AnchorLink onClick={() => this.close()} href="#contact" className="nav-item">.contato</AnchorLink>
+              <a href="https://forms.gle/15fnmpaKeud2vQuo8" target="_blank" rel="noopener noreferrer" className="nav-item">.o que achou?</a>
             </div>
           </nav>
         </header>
@@ -107,7 +109,7 @@ class App extends React.Component {
           </p>
           <div className="section-image">
             <div className="image-container">
-              <img className="image " src={Lifestyle} alt="Sheesh" />
+              <video autoPlay loop muted playsInline src={BaconVideo} className="image" />
             </div>
             <div className="overlay" />
           </div>
