@@ -8,13 +8,16 @@ import CloseIcon from './assets/img/close.svg';
 import MenuImage from './assets/img/menu.jpg';
 import BaconVideo from './assets/img/cooking_bacon.mp4';
 // import Lifestyle from './assets/img/lifestyle1.jpg';
-import Burger1 from './assets/img/burger1.jpg';
-import Burger2 from './assets/img/burger2.jpg';
-import Burger3 from './assets/img/burger3.jpg';
-import Burger4 from './assets/img/burger4.jpg';
-import Burger5 from './assets/img/burger5.jpg';
-import Burger6 from './assets/img/burger6.jpg';
-import Burger7 from './assets/img/burger7.jpg';
+import Burger1 from './assets/imgfull/sheesh.jpg';
+import Burger2 from './assets/imgfull/classic.jpg';
+import Burger3 from './assets/imgfull/pnb.jpg';
+import Burger4 from './assets/imgfull/aa.jpg';
+import Burger5 from './assets/imgfull/egg.jpg';
+import Burger6 from './assets/imgfull/sheesharito.jpg';
+import Burger7 from './assets/imgfull/crispy.jpg';
+import Burger8 from './assets/imgfull/mush.jpg';
+import Burger9 from './assets/imgfull/homus.jpg';
+import Burger10 from './assets/imgfull/lowc.jpg';
 
 class App extends React.Component {
   constructor(props) {
@@ -111,7 +114,6 @@ class App extends React.Component {
             <div className="image-container">
               <video autoPlay loop muted playsInline src={BaconVideo} className="image" />
             </div>
-            <div className="overlay" />
           </div>
         </section>
         <section className="App-section Primary-bg pb-0" id="menu">
@@ -121,13 +123,10 @@ class App extends React.Component {
               <span className="food-menu__item-title">Burgers</span>
               <Slider {...settings}>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger7} alt="Sheesh" />
+                  <img className="image" src={Burger1} alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
                   <img className="image" src={Burger2} alt="Sheesh" />
-                </div>
-                <div className="food-menu-image">
-                  <img className="image" src={Burger1} alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
                   <img className="image" src={Burger3} alt="Sheesh" />
@@ -140,6 +139,18 @@ class App extends React.Component {
                 </div>
                 <div className="food-menu-image">
                   <img className="image" src={Burger6} alt="Sheesh" />
+                </div>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger7} alt="Sheesh" />
+                </div>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger8} alt="Sheesh" />
+                </div>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger9} alt="Sheesh" />
+                </div>
+                <div className="food-menu-image">
+                  <img className="image" src={Burger10} alt="Sheesh" />
                 </div>
               </Slider>
               <br />
