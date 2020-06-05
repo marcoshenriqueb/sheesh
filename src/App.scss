@@ -19,6 +19,9 @@ $complementary-color: #ff3232;
   color: white;
   padding: .8rem 1rem;
   font-size: .7rem;
+  .text {
+    font-weight: 700;
+  }
 }
 
 .header {
@@ -117,17 +120,19 @@ $complementary-color: #ff3232;
   padding: .8rem;
   color: white;
   border: none;
+  font-weight: 700;
   text-transform: uppercase;
-  font-weight: normal;
   text-decoration: none;
+  transition: all 300ms ease;
+  &:hover {
+    background: $primary-color;
+  }
 }
 
 .header-image {
-  height: 70vh;
-  width: 100%;
-  // background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("./assets/img/lifestyle2.jpg") no-repeat;
-  background: url("./assets/img/lifestyle2.jpg") no-repeat;
-  background-position: center 60%;
+  display: none;
+  background: url("./assets/img/egg.jpg") no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -231,11 +236,6 @@ $complementary-color: #ff3232;
   padding: 1rem 0;
 }
 
-.food-menu__item-title {
-  font-size: 2.2rem;
-  color: $complementary-color;
-}
-
 .food-menu-image {
   display: block;
   width: 100%;
@@ -254,6 +254,8 @@ $complementary-color: #ff3232;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  font-weight: 600;
+  font-size: .8rem;
   color: white;
 }
 
@@ -350,11 +352,9 @@ $complementary-color: #ff3232;
   }
 
   .header-image {
+    display: inline;
     height: 80vh;
     width: 50%;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("./assets/img/lifestyle2.jpg") no-repeat;
-    background-position: center 60%;
-    background-size: cover;
   }
 
   .storystelling {
@@ -397,13 +397,9 @@ $complementary-color: #ff3232;
   }
 
   .contact {
-    padding: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
-    color: white;
+    font-size: 1rem;
   }
 
 }

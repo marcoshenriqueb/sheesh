@@ -5,19 +5,15 @@ import './App.scss';
 import Logo from './assets/img/logo.png';
 import Menu from './assets/img/menu.svg';
 import CloseIcon from './assets/img/close.svg';
-import MenuImage from './assets/img/menu.jpg';
+import MenuImage from './assets/img/Cardapio_sheesh.pdf';
 import BaconVideo from './assets/img/cooking_bacon.mp4';
-// import Lifestyle from './assets/img/lifestyle1.jpg';
-import Burger1 from './assets/imgfull/sheesh.jpg';
-import Burger2 from './assets/imgfull/classic.jpg';
-import Burger3 from './assets/imgfull/pnb.jpg';
-import Burger4 from './assets/imgfull/aa.jpg';
-import Burger5 from './assets/imgfull/egg.jpg';
-import Burger6 from './assets/imgfull/sheesharito.jpg';
-import Burger7 from './assets/imgfull/crispy.jpg';
-import Burger8 from './assets/imgfull/mush.jpg';
-import Burger9 from './assets/imgfull/homus.jpg';
-import Burger10 from './assets/imgfull/lowc.jpg';
+import Burger1 from './assets/img/sheesh.jpg';
+import Burger2 from './assets/img/classic.jpg';
+import Burger3 from './assets/img/provolone.jpg';
+import Burger4 from './assets/img/homus.jpg';
+import Burger5 from './assets/img/egg.jpg';
+import Burger6 from './assets/img/DSC_3424.jpg';
+import Burger7 from './assets/img/DSC_3213.jpg';
 
 class App extends React.Component {
   constructor(props) {
@@ -59,9 +55,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="info">
-          <span className="text">Seg - Dom: 12h - 24h</span>
+          <span className="text">Seg - Dom: 17h - 23h</span>
           <span className="text">Rua Oliveira Fausto n29A, Botafogo</span>
-          <span className="text">(21) 4116-1207</span>
+          <span className="text">(21) 98346-1516</span>
         </div>
         <header className="header">
           <img className="Logo" src={Logo} alt="Sheesh" />
@@ -101,15 +97,18 @@ class App extends React.Component {
         <section className="App-section Primary-bg" id="why">
           <h2 className="subtitle">.o porquê</h2>
           <p className="storystelling sheesh-border border-padding">
-            O SHEESH! foi criado com o propósito de oferecer um hambúrguer artesanal
-            de qualidade, por um preço justo. Fazemos uma escolha criteriosa de cada
-            fornecedor e da origem dos alimentos. Além disso não usamos carne congelada
-            e produzimos nossos blends quase que diaramente.
+            O SHEESH! foi criado com o propósito de oferecer um hambúrguer
+            de qualidade com um serviço acolhedor e um preço justo. Receita
+            simples e ingredientes de qualidade são o nosso segredo.
+            Escolhemos com muito cuidado os nossos fornecedores
+            e nos preocupamos com a origem dos alimentos.
             <br />
             <br />
-            Venha conhecer o nosso cantinho em Botafogo! Ahh, não esqueça de pronunciar
+            Venha nos visitar ou peça no delivery! Ahh, não esqueça de pronunciar
             certinho, é Xix que fala ;)
           </p>
+          <br />
+          <a className="button" target="_blank" rel="noopener noreferrer" href="http://bnc.lt/scMl/eXuVt7tPlY">peça já</a>
           <div className="section-image">
             <div className="image-container">
               <video autoPlay loop muted playsInline src={BaconVideo} className="image" />
@@ -120,37 +119,27 @@ class App extends React.Component {
           <h2 className="subtitle">.cardápio</h2>
           <div className="food-menu">
             <div className="food-menu__item">
-              <span className="food-menu__item-title">Burgers</span>
               <Slider {...settings}>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger1} alt="Sheesh" />
+                  <img src={Burger1} className="image" alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger2} alt="Sheesh" />
+                  <img src={Burger2} className="image" alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger3} alt="Sheesh" />
+                  <img src={Burger3} className="image" alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger4} alt="Sheesh" />
+                  <img src={Burger4} className="image" alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger5} alt="Sheesh" />
+                  <img src={Burger5} className="image" alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger6} alt="Sheesh" />
+                  <img src={Burger6} className="image" alt="Sheesh" />
                 </div>
                 <div className="food-menu-image">
-                  <img className="image" src={Burger7} alt="Sheesh" />
-                </div>
-                <div className="food-menu-image">
-                  <img className="image" src={Burger8} alt="Sheesh" />
-                </div>
-                <div className="food-menu-image">
-                  <img className="image" src={Burger9} alt="Sheesh" />
-                </div>
-                <div className="food-menu-image">
-                  <img className="image" src={Burger10} alt="Sheesh" />
+                  <img src={Burger7} className="image" alt="Sheesh" />
                 </div>
               </Slider>
               <br />
@@ -167,9 +156,9 @@ class App extends React.Component {
           <div className="contact">
             <span>Venha nos conhecer ;)</span>
             <br />
-            <span>Seg - Dom: 12h - 24h</span>
+            <span>Seg - Dom: 17h - 23h</span>
             <span>Rua Oliveira Fausto n29A, Botafogo</span>
-            <span>(21) 4116-1207</span>
+            <span>(21) 98346-1516</span>
             <span>contato@sheesh.com.br</span>
           </div>
           <div className="map">
