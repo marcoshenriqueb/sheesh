@@ -5,8 +5,7 @@ import './App.scss';
 import Logo from './assets/img/logo.png';
 import Menu from './assets/img/menu.svg';
 import CloseIcon from './assets/img/close.svg';
-import MenuImage from './assets/img/Cardapio_sheesh.pdf';
-import BaconVideo from './assets/img/cooking_bacon.mp4';
+import Hero from './assets/img/hero.jpeg';
 import Burger1 from './assets/img/sheesh.jpg';
 import Burger2 from './assets/img/classic.jpg';
 import Burger3 from './assets/img/provolone.jpg';
@@ -54,11 +53,6 @@ class App extends React.Component {
     const menuClasses = `menu ${isMenuActive ? 'active' : ''}`;
     return (
       <div className="App">
-        <div className="info">
-          <span className="text">Seg - Dom: 17h - 23h</span>
-          <span className="text">Rua Oliveira Fausto n29A, Botafogo</span>
-          <span className="text">(21) 98346-1516</span>
-        </div>
         <header className="header">
           <img className="Logo" src={Logo} alt="Sheesh" />
           <span
@@ -78,9 +72,9 @@ class App extends React.Component {
             </div>
             <div className="nav">
               <AnchorLink onClick={() => this.close()} href="#why" className="nav-item">.o porquê</AnchorLink>
-              <AnchorLink onClick={() => this.close()} href="#menu" className="nav-item">.cardápio</AnchorLink>
+              <a href="http://dire.to/sheesh" target="_blank" rel="noopener noreferrer" className="nav-item">.delivery</a>
+              <AnchorLink onClick={() => this.close()} href="#menu" className="nav-item">.fotos</AnchorLink>
               <AnchorLink onClick={() => this.close()} href="#contact" className="nav-item">.contato</AnchorLink>
-              <a href="https://forms.gle/15fnmpaKeud2vQuo8" target="_blank" rel="noopener noreferrer" className="nav-item">.o que achou?</a>
             </div>
           </nav>
         </header>
@@ -88,7 +82,7 @@ class App extends React.Component {
           <div className="pop-bg">
             <h2 className="title">É xix que fala?</h2>
             <h1 className="main-title">hambúrguer gostoso e sem frescura</h1>
-            <a className="button button-home" target="_blank" rel="noopener noreferrer" href={MenuImage}>cardápio</a>
+            <a className="button button-home" target="_blank" rel="noopener noreferrer" href="http://dire.to/sheesh">delivery</a>
           </div>
           <div className="header-image">
             &nbsp;
@@ -97,26 +91,24 @@ class App extends React.Component {
         <section className="App-section Primary-bg" id="why">
           <h2 className="subtitle">.o porquê</h2>
           <p className="storystelling sheesh-border border-padding">
-            O SHEESH! foi criado com o propósito de oferecer um hambúrguer
-            de qualidade com um serviço acolhedor e um preço justo. Receita
-            simples e ingredientes de qualidade são o nosso segredo.
-            Escolhemos com muito cuidado os nossos fornecedores
-            e nos preocupamos com a origem dos alimentos.
+            Os melhores smash burgers do Rio! Agora também temos sanduíches artesanais,
+            todos feitos com muito carinho e dedicação, desde a escolha dos fornecedores
+            aos nossos cuidados no preparo.
             <br />
             <br />
             Venha nos visitar ou peça no delivery! Ahh, não esqueça de pronunciar
             certinho, é Xix que fala ;)
           </p>
           <br />
-          <a className="button" target="_blank" rel="noopener noreferrer" href="http://bnc.lt/scMl/eXuVt7tPlY">peça já</a>
+          <a className="button" target="_blank" rel="noopener noreferrer" href="http://dire.to/sheesh">peça já</a>
           <div className="section-image">
             <div className="image-container">
-              <video autoPlay loop muted playsInline src={BaconVideo} className="image" />
+              <img src={Hero} className="image" alt="Sheesh" />
             </div>
           </div>
         </section>
         <section className="App-section Primary-bg pb-0" id="menu">
-          <h2 className="subtitle">.cardápio</h2>
+          <h2 className="subtitle">.fotos</h2>
           <div className="food-menu">
             <div className="food-menu__item">
               <Slider {...settings}>
@@ -144,22 +136,26 @@ class App extends React.Component {
               </Slider>
               <br />
               <br />
-              <br />
-              <a className="button" target="_blank" rel="noopener noreferrer" href={MenuImage}>cardápio</a>
-              <br />
-              <br />
             </div>
           </div>
         </section>
         <section className="App-section Primary-bg colored pb-0" id="contact">
           <h2 className="subtitle">.contato</h2>
           <div className="contact">
-            <span>Venha nos conhecer ;)</span>
-            <br />
-            <span>Seg - Dom: 17h - 23h</span>
-            <span>Rua Oliveira Fausto n29A, Botafogo</span>
-            <span>(21) 98346-1516</span>
-            <span>contato@sheesh.com.br</span>
+            <div className="store">
+              <span className="lead">Botafogo</span>
+              <br />
+              <span>Seg - Dom: 12h - 23h</span>
+              <span>Rua Oliveira Fausto n29A, Botafogo</span>
+              <span>(21) 98346-1516</span>
+            </div>
+            <div className="store">
+              <span className="lead">Barra</span>
+              <br />
+              <span>Ter - Dom: 17h - 23h</span>
+              <span>Av Ruy Frazão Soares 191, loja J, Botafogo</span>
+              <span>(21) 98247-8071</span>
+            </div>
           </div>
           <div className="map">
             <iframe
